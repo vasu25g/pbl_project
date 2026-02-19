@@ -220,13 +220,15 @@
 
 <script>
 let sec = 0;
+
 function startTimer() {
     setInterval(() => {
         sec++;
         let m = Math.floor(sec / 60);
         let s = sec % 60;
+
         document.getElementById('displayTime').innerText =
-            ${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')};
+            `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
     }, 1000);
 }
 
